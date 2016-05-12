@@ -53,7 +53,7 @@ Undefined is not an Object allows to safely get any nested value without
 having to check every key. This allows to simplify this kind of checks:
 
 ```js
-const uo = require('uo');
+const uo = require('uo.js');
 
 var getJobInsurancesAmount = function (person) {
   if (uo(person, 'job', 'perks', 'insurance')) {
@@ -67,7 +67,7 @@ var getJobInsurancesAmount = function (person) {
 also it can be used to safe get some nested value, for example:
 
 ```js
-const uo = require('uo');
+const uo = require('uo.js');
 
 var getJobInsurancesAmount = function (person) {
     return (uo(person, 'job', 'perks', 'insurance') || [])
@@ -81,11 +81,25 @@ var getJobInsurancesAmount = function (person) {
 or
 
 ```js
-const uo = require('uo');
+const uo = require('uo.js');
 
 var getCompanyName = function (person) {
   return uo(person, 'job', 'company', 'name');
 };
+```
+
+## Usage
+
+Install dependency
+
+```
+npm install --save uo.js
+```
+
+require dependency
+
+```js
+const uo = require('uo.js');
 ```
 
 ## Warnings
