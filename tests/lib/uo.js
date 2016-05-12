@@ -39,4 +39,7 @@ describe('uo', () => {
   it('return undefined if some nested key does not exists', () => {
     should.not.exists(uo(obj, 'job', 'cars'));
   })
+  it('return undefined if a key does not exists in the middle', () => {
+    should.not.exists(uo(obj, 'son', 'name'));
+  })
 });
