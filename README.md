@@ -1,6 +1,6 @@
-### Undefined is not an Object
+### UO
 
-Aims to solve the problem of this error. When there is a complex object such us:
+Aims to solve the problem of the error Cannot read property wathever of undefined. When there is a complex object such us:
 
 ```js
   let person = {
@@ -31,8 +31,8 @@ Aims to solve the problem of this error. When there is a complex object such us:
 
 if some operation over some nested key is need but we cannot
 asure that any of the parent keys are set up then is need to 
-check all the parent keys in order to avoid a undefined is not
-wathever runtime error:
+check all the parent keys in order to avoid a Cannot read property
+wathever of undefined runtime error:
 
 ```js
 var getJobInsurancesAmount = function (person) {
@@ -49,7 +49,7 @@ var getJobInsurancesAmount = function (person) {
 };
 ```
 
-Undefined is not an Object allows to safely get any nested value without
+uo allows to safely get any nested value without
 having to check every key. This allows to simplify this kind of checks:
 
 ```js
