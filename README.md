@@ -42,9 +42,9 @@ var getJobInsurancesAmount = function (person) {
     person.job.perks &&
     person.job.perks.insurance
   ) {
-    return person.job.perks.insurance.reduce((insurance, amount) => {
+    return person.job.perks.insurance.reduce((amount, insurance) => {
       return amount + insurance.amount;
-    }); 
+    }, 0); 
   }
 };
 ```
@@ -57,9 +57,9 @@ const uo = require('uo.js');
 
 var getJobInsurancesAmount = function (person) {
   if (uo(person, 'job', 'perks', 'insurance')) {
-    return person.job.perks.insurance.reduce((insurance, amount) => {
+    return person.job.perks.insurance.reduce((amount, insurance) => {
       return amount + insurance.amount;
-    }); 
+    }, 0); 
   }
 };
 ```
@@ -71,9 +71,9 @@ const uo = require('uo.js');
 
 var getJobInsurancesAmount = function (person) {
     return (uo(person, 'job', 'perks', 'insurance') || [])
-    .reduce((insurance, amount) => {
+    .reduce((amount, insurance) => {
       return amount + insurance.amount;
-    }); 
+    }, 0); 
   }
 };
 ```
