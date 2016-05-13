@@ -84,7 +84,11 @@ or
 const uo = require('uo.js');
 
 var getCompanyName = function (person) {
-  return uo(person, 'job', 'company', 'name');
+  return uo(person, 'job', 'company', 'name');// 'meats && cows inc.'
+};
+
+var getCarBrand = function (person) {
+  return uo(person, 'job', 'car', 'brand');// undefined
 };
 ```
 
